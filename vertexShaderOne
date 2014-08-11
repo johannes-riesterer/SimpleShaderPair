@@ -1,0 +1,9 @@
+uniform float dt;
+varying float sth;
+
+void main() {
+   
+    gl_Vertex = gl_Vertex +  vec4(1.5*abs(cos(dt))* gl_Normal*5.0, 1.0);
+    sth = floor(length(gl_Vertex));
+    gl_Position = gl_ModelViewProjectionMatrix*gl_Vertex;
+}

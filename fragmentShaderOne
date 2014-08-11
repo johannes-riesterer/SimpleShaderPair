@@ -1,0 +1,8 @@
+uniform float dt;
+uniform float ddt;
+varying float sth;
+
+void main()
+{
+    gl_FragColor = vec4(abs(tanh(sth)),abs(sin(sth)), abs(sin(dt)), .4);
+}
